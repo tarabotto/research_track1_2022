@@ -69,7 +69,6 @@ def find_silver_token():
 	    rot_y=token.rot_y
 	    code=token.info.offset
 	    
-	  
 	    
     if dist==100:
 	return -1, -1, -1
@@ -162,11 +161,11 @@ def increase_research(actual_dist_offset):
 
 
 
-												# MAIN CODE
+						# MAIN CODE
 												
 												
 											
-											#VARIABLES DECLARATION 
+						#VARIABLES DECLARATION 
  			
 paired=[] #list that will be filled with paired golden & silver token codes
 
@@ -179,7 +178,7 @@ try_angle=0 #Initialize the Angle where the robot is pointing to in order to fin
 size=0.0 #inizialize the size of the token
 
 												
-												#ROUTINE
+						#ROUTINE
 
 while 1:
 	if len(paired)==12:
