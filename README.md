@@ -73,7 +73,6 @@ Initialize `try angle` to `zero`
 Since the robot has no knowledge of its place in the environment of the arena, it doesn't know the absolute position of the boxes.   
 All it knows are the positions of the boxes in its field of view with respect to its placement in the arena.  
 The code is developed in order to make the robot looks around on the left & right in search of the nearest box.  
-These movements could be expensive in energetic prospectives. It could be smarter by adding a logic that gives the robot te perception   
-of the boxes, even if them are behind it, by calculating and saving the distances and angles each time the robot moves, remembering the last time it saw the token.
+These movements could be expensive in energetic prospectives. It could be smarter adding a logic that gives to the robot the perception of the boxes, even if them are behind it, by calculating and saving the distances and angles each time the robot moves, remembering the last time it saw the token.
 
 
