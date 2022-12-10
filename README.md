@@ -10,7 +10,11 @@ Installing and running
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
-Once the dependencies are installed, simply run the `assignment1.py` in */research_track1_2022/robot-sim* path.
+Once the dependencies are installed, simply run the `assignment.py` in */research_track1_2022/robot-sim* path.
+
+```bash
+$ python2 run.py assignment.py
+```
 
 
 Pseudocode
