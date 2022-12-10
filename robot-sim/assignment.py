@@ -240,7 +240,7 @@ while 1:
 		
 		
 					
-	elif (rot_y>a_th or rot_y<-a_th) and (not code in paired): #next token disalignment situazion
+	elif (rot_y>a_th or rot_y<-a_th) and (not code in paired): #next token disalignment situation
 		
 		try_angle=0				
 		turn_angle(rot_y,0.5)
