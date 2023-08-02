@@ -3,7 +3,7 @@ Assignment 2
 
 This is the Luca Tarabotto's second assignment for the research track 1 course.
 It's a ROS package that implements an action client and its interface in order to communicate with the given [action server](https://github.com/CarmineD8/assignment_2_2022).\
-The playground consists in a simulation of a 3D Robot able to move in a limited area, the user can digit the destination coordinates in a console interface and cancel or confirm the run after sending the input.\
+The playground consists in a simulation of a 3D Robot able to move in a limited area, the user can digit the destination coordinates in a console interface and cancel or confirm the run after sending the input.
 
 Requirements
 -------------
@@ -141,7 +141,7 @@ Interface Pseudocode
 >>>	print a dot\
 >>>	add 1 to `i`
 >>
->>  else if `i` is between 8 and 16\
+>>  else if `i` is between 8 and 16
 >>>	go back with the cursor and print a space replacing the last dot\
 >>>	add 1 to `i`
 >>
@@ -184,7 +184,7 @@ Interface Pseudocode
 >>>> while the robot `state` is not "*arrived*"
 >>>>> refresh the topics \
 >>>>> if the robot `state` is "*arrived*"
->>>>>> break the while loop
+>>>>>> break the while loop\
 >>>>> save the output of **show_progress**(`i`,"*The Robot is moving*") function in local variable `i`\
 >>>>> apply refresh frequency delay
 >>>> print run finished feedback
@@ -201,7 +201,7 @@ Interface Pseudocode
 >>>> while the robot `state` is not "*cancelled*"
 >>>>> refresh the topics\
 >>>>> if the robot `state` is "*cancelled*"
->>>>>> break the while loop
+>>>>>> break the while loop\
 >>>>> save the output of **show_progress**(`i`,"*Cancelling goal*") function in local variable `i`\
 >>>>> apply refresh frequency delay
 >>>> print run cancelled feedback
