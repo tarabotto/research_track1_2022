@@ -184,9 +184,11 @@ Interface Pseudocode
 >>>> while the robot `state` is not "*arrived*"
 >>>>> refresh the topics \
 >>>>> if the robot `state` is "*arrived*"
->>>>>> break the while loop\
+>>>>>> break the while loop
+>>>>>
 >>>>> save the output of **show_progress**(`i`,"*The Robot is moving*") function in local variable `i`\
 >>>>> apply refresh frequency delay
+>>>>
 >>>> print run finished feedback
 >>>
 >>> else if `interface_flag` is **0**
@@ -201,7 +203,9 @@ Interface Pseudocode
 >>>> while the robot `state` is not "*cancelled*"
 >>>>> refresh the topics\
 >>>>> if the robot `state` is "*cancelled*"
->>>>>> break the while loop\
+>>>>>> break the while loop
+>>>>>
 >>>>> save the output of **show_progress**(`i`,"*Cancelling goal*") function in local variable `i`\
 >>>>> apply refresh frequency delay
+>>>>
 >>>> print run cancelled feedback
