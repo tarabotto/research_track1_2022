@@ -198,6 +198,7 @@ Interface Pseudocode
 >>>>> print error feedback\
 >>>>> `cancel_client` calls `/ac_cancel` service using the `cancel_srv` message\
 >>>>> save the response part of `cancel_srv` message in `cancel_feedback` local variable
+>>>>
 >>>> initialize local variable `i`\
 >>>> set refresh frequency\
 >>>> while the robot `state` is not "*cancelled*"
