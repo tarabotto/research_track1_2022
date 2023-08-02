@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find assignment_2_2022)/launch/assignment1.launch" />
+    <node pkg="assignment2_tarabotto" type="action_client" name="action_client" />
+    <node pkg="assignment2_tarabotto" type="interface" name="interface" launch-prefix="xterm -e"/>
+    <param name="publish_frequency" type="double" value="5.0" />
+    <node pkg="assignment2_tarabotto" type="average_speed" name="average_speed" />
+    <node pkg="assignment2_tarabotto" type="counter" name="counter" />
+    
+    
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+	<include file="$(find assignment_2_2022)/launch/assignment1.launch" />
+	<node pkg="assignment2_tarabotto" type="action_client.cpp" name="action_client" />
+   
+</launch>
