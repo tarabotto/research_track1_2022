@@ -43,47 +43,47 @@ Action Client Pseudocode
 ------------------------ 
 
 >Initialize global variables `p_x`, `p_y`, `vel_x`, `vel_z`, `goal_x`, `goal_y`, `cancel_flag`, `goal_flag`
-
->Initialize **send_coord** service function\
+>
+>Initialize **send_coord** service function
 >>  set `goal_x` and `goal_y` at the value of the request part in the `Send` message\
 >>  set the value of the response part in the `Send` message to `goal_x` and `goal_y` \
 >>  set `goal_flag` to **1**
-
->Initialize **cancel_goal** service function\
+>
+>Initialize **cancel_goal** service function
 >>  set `cancel_flag` to **1**\
 >>  set the flag in the response part in the `Cancel` message to **1** 
-
->Initialize **odomCallback** CallBack function\
+>
+>Initialize **odomCallback** CallBack function
 >>  set `p_x`, `p_y`, `vel_x`, `vel_z` at the corresponding values of the message received in the topic `/odom`
-
+>
 >**Start of the Main Function**
 >
->>Initialize the Node `action_client`\
->>Initialize Node Handle `nh`
+>Initialize the Node `action_client`\
+>Initialize Node Handle `nh`
 >
->>Create the Action Client `ac` that communicates with the Action server `/reaching_goal`\
->>Wait for server
+>Create the Action Client `ac` that communicates with the Action server `/reaching_goal`\
+>Wait for server
 >
->>Create Publisher `pub` that publish in the topic `custom_topic`\
->>Create Subrscriber `sub2` that subscribe to the topic `/odom` and calls **odomCallback** CallBack function
+>Create Publisher `pub` that publish in the topic `custom_topic`\
+>Create Subrscriber `sub2` that subscribe to the topic `/odom` and calls **odomCallback** CallBack function
 >
->>Create Service `send_service` that sends coordinates by calling the function `send_coord` that compiles the `Send` message\
->>Create Service `cancel_service` that cancel the run by calling the function `cancel_goal` that compiles the `Cancel` message
+>Create Service `send_service` that sends coordinates by calling the function `send_coord` that compiles the `Send` message\
+>Create Service `cancel_service` that cancel the run by calling the function `cancel_goal` that compiles the `Cancel` message
 >
->>Initialize `goal` message\
->>Initialize `odometry` message
+>Initialize `goal` message\
+>Initialize `odometry` message
 >
 >>While the node is running
->
->>  if `cancel_flag` is **1**\
+>>
+>>  if `cancel_flag` is **1**
 >>> communicate the Server to Cancel Goal\
 >>>	reset `cancel_flag
->
->>  if `goal_flag` is **1**\
+>>
+>>  if `goal_flag` is **1**
 >>>	compile `goal` message fields with `goal_x` and `goal_y`\
 >>>	communicate the Server to Set Goal\
 >>>	reset `goal_flag`
->
+>>
 >>  refreshing the topics
 >>  compile `odometry` message fields with `p_x`, `p_y`, `vel_x`, `vel_z`\
 >>  `pub` publishes the `odometry` message
